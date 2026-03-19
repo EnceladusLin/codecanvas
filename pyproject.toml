@@ -1,0 +1,20 @@
+[build-system]
+requires = ["setuptools>=61.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "codecanvas"
+version = "0.1.0"
+description = "Generate beautiful SVG coding activity summaries from git history"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = ["click>=8.0", "gitpython>=3.1", "svgwrite>=1.4"]
+
+[project.scripts]
+codecanvas = "codecanvas.cli:main"
+
+[tool.setuptools.package-dir]
+"" = "src"
+
+[tool.setuptools.packages.find]
+where = ["src"]
