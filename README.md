@@ -10,19 +10,37 @@ CodeCanvas turns raw git commits into shareable developer visuals:
 - contributor streak cards
 - SVG summaries for README profiles
 
-## Why it can get stars
+## Why this has star potential
 
-- visual output spreads better than CLI-only tools
-- useful for README/profile pages
-- works with plain git history, no SaaS required
-- easy to screenshot and post
+Most git analytics tools stop at numbers. CodeCanvas focuses on **presentation**: images you can actually embed in a README, post on X, or drop into a personal site.
+
+That makes it naturally more shareable than a plain terminal report.
+
+## Example outputs
+
+Generated example assets live in `examples/output/`.
+
+- `heatmap.svg`
+- `card.svg`
+
+## CLI
+
+```bash
+codecanvas --repo . --output ./codecanvas-output
+```
+
+This generates:
+- `heatmap.svg`
+- `weekly.svg`
+- `hourly.svg`
+- `card.svg`
 
 ## MVP
 
 - parse git log
 - aggregate commits by day/week/hour
 - export SVG dashboard
-- export PNG via optional browser render
+- export PNG later via optional renderer
 - CLI + config file
 
 ## Stack
@@ -32,6 +50,14 @@ CodeCanvas turns raw git commits into shareable developer visuals:
 - svgwrite
 - gitpython
 
-## Planned launch angle
+## Launch positioning
 
-"Your git history, turned into beautiful SVG dashboards."
+**Your git history, turned into beautiful SVG dashboards.**
+
+## Next build targets
+
+- contributor comparison cards
+- repository language bands
+- profile-ready dark/light themes
+- markdown embed snippets
+- screenshot assets for launch posts
